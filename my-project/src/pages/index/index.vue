@@ -1,15 +1,21 @@
 <template>
 	<view>
-		This is a {{ name }}
+		<text>This is a {{ product_name }}</text>
+		<button @click.prevent="handleClick">BUTTON</button>
 	</view>
 
 </template>
 
 <script>
-	export default {
-		data() {
+	export default{
+		data(){
 			return {
-				name: 'Todo List'
+				product_name: 'Todo List'
+			}
+		},
+		methods: {
+			handleClick() {
+				this.product_name += '!'
 			}
 		}
 	}
